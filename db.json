@@ -1,0 +1,32 @@
+{
+  "words": [
+    {
+      "id": "1",
+      "word": "angular",
+      "category": "tecnología"
+    },
+    {
+      "id": "2",
+      "word": "typescript",
+      "category": "tecnología"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin123",
+      "role": "admin"
+    }
+  ],
+  "scores": [
+    {
+      "id": "65d7",
+      "playerName": "fabio",
+      "word": "ANGULAR",
+      "attemptsLeft": 6,
+      "score": 60,
+      "date": "2025-02-03T20:18:06.187Z"
+    }
+  ]
+}
