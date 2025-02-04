@@ -130,25 +130,8 @@ Desarrollar una aplicación web en Angular 18 que implemente el clásico juego d
    ```bash
    npm install -g json-server
    ```
-2. Crear un archivo `db.json` en la raíz del proyecto con la siguiente estructura:
-   ```json
-   {
-     "words": [
-       {
-         "id": "1",
-         "word": "angular",
-         "category": "tecnología"
-       },
-       {
-         "id": "2",
-         "word": "typescript",
-         "category": "tecnología"
-       }
-     ],
-     "scores": []
-   }
-   ```
-3. Iniciar JSON Server:
+
+2. Iniciar JSON Server:
    ```bash
    json-server --watch db.json
    ```
