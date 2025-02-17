@@ -8,7 +8,7 @@ Desarrollar una aplicación web en Angular 18 que implemente el clásico juego d
 ## **Requerimientos Técnicos**
 1. **Angular CLI 18.x**: Para la creación y gestión del proyecto.
 2. **Bootstrap 5.x**: Para estilos y diseño responsive.
-3. **JSON Server**: Para simular la API REST localmente.
+3. **Mock API**: Para simular la API REST.
 4. **RxJS**: Para manejo de observables y peticiones HTTP.
 
 ---
@@ -32,7 +32,7 @@ Desarrollar una aplicación web en Angular 18 que implemente el clásico juego d
 - Guardar la puntuación del jugador en la API REST (nombre del usuario, palabra adivinada, intentos restantes y fecha).
 - Mostrar una tabla de puntuaciones en la pantalla de resultados, ordenada por la cantidad de intentos restantes.
 - **Roles de Usuario**:
-    - **player**: Solo podrá ver sus propias puntuaciones.
+    - **student**: Solo podrá ver sus propias puntuaciones.
     - **admin**: Podrá ver todas las puntuaciones.
 
 ---
@@ -56,7 +56,9 @@ Desarrollar una aplicación web en Angular 18 que implemente el clásico juego d
 - **Roles**:
     - **player**: Acceso limitado a las funcionalidades del juego y sus puntuaciones.
     - **admin**: Acceso completo a todas las puntuaciones y gestión de usuarios.
-
+      
+## **Explicación para el Inicio de Sesión**
+Los usuarios deberán iniciar sesión utilizando su correo electrónico institucional con el formato `legajo@tecnicatura.frc.utn.edu.ar` y su legajo correspondiente como contraseña. Es importante validar que el dominio del correo sea el correcto.
 ---
 
 ### **4. Comunicación con la API REST**
@@ -68,6 +70,7 @@ Desarrollar una aplicación web en Angular 18 que implemente el clásico juego d
     - **POST** `/scores`: Guardar una nueva puntuación.
 3. **Usuarios**
     - **GET** `/users?username={}&password={}`: Login.
+
 ---
 
 ### **5. Algoritmo de Procesamiento**
@@ -86,7 +89,7 @@ Desarrollar una aplicación web en Angular 18 que implemente el clásico juego d
 ## **Documentación de la API**
 
 ### **1. Endpoint de Palabras**
-**URL**: `http://localhost:3000/words`  
+**URL**: `https://671fe287e7a5792f052fdf93.mockapi.io/words`  
 **Descripción**: Obtiene la lista de palabras para el juego.
 
 #### Formato de Respuesta (GET):
@@ -101,7 +104,7 @@ Desarrollar una aplicación web en Angular 18 que implemente el clásico juego d
 ```
 
 ### **2. Endpoint de Puntuaciones**
-**URL**: `http://localhost:3000/scores`  
+**URL**: `https://671fe287e7a5792f052fdf93.mockapi.io/scores`  
 **Descripción**: Gestiona las puntuaciones de los jugadores.
 
 #### Formato de Respuesta (GET):
@@ -129,9 +132,10 @@ Desarrollar una aplicación web en Angular 18 que implemente el clásico juego d
   "date": "2024-10-28"
 }
 ```
-### **2. Endpoint de Puntuaciones**
-**URL**: `http://localhost:3000/users`  
-**Descripción**: Gestiona las puntuaciones de los jugadores.
+
+### **3. Endpoint de Usuarios**
+**URL**: `https://679b8dc433d31684632448c9.mockapi.io/users`  
+**Descripción**: Gestiona la autenticación de los usuarios.
 
 #### Formato de Respuesta (GET):
 ```json
@@ -144,19 +148,21 @@ Desarrollar una aplicación web en Angular 18 que implemente el clásico juego d
     }
   ]
 ```
+
 ---
 
-## **Configuración de JSON Server**
-1. Instalar JSON Server globalmente:
-   ```bash
-   npm install -g json-server
-   ```
+## **Rutas del Proyecto**
+La aplicación tendrá las siguientes rutas:
+1. **/login**: Para que los usuarios puedan iniciar sesión.
+2. **/game**: Pantalla del juego donde los usuarios pueden jugar al Ahorcado.
+3. **/scores**: Pantalla de puntuaciones.
+    - **Para players**: Solo podrán ver sus puntuaciones personales.
+    - **Para admins**: Podrán ver todas las puntuaciones de todos los usuarios.
 
+---
 
-2. Iniciar JSON Server:
-   ```bash
-   json-server --watch db.json
-   ```
+## **Configuración de Mock API**
+El uso de una Mock API te permitirá simular la comunicación con un servidor real durante el desarrollo. Puedes utilizar herramientas como JSON Server o cualquier otra Mock API que prefieras para crear los endpoints definidos anteriormente y tener respuestas simuladas. Asegúrate de que tu aplicación esté correctamente configurada para interactuar con estos endpoints simulados.
 
 ---
 
@@ -198,3 +204,5 @@ En la carpeta `assets` encontrarán las imágenes con los estilos de la aplicaci
 | **Total**                  | **100**|
 
 ---
+
+
