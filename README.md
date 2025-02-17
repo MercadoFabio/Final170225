@@ -74,10 +74,6 @@ Los usuarios deberán iniciar sesión utilizando su correo electrónico instituc
 
 ---
 
-Aquí tienes la sección actualizada del algoritmo de procesamiento, incorporando el nuevo detalle sobre la generación del identificador único para cada partida:
-
----
-
 ### **5. Algoritmo de Procesamiento**
 - Generar un identificador único para cada partida:
   1. Realizar un **GET** al endpoint de puntuaciones (`/scores?playerName={}`).
