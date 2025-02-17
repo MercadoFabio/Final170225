@@ -51,6 +51,7 @@ Desarrollar una aplicación web en Angular 18 que implemente el clásico juego d
 ### **3. Sistema de Autenticación**
 - Crear un sistema de autenticación para los usuarios.
 - Los usuarios podrán iniciar sesión con su nombre de usuario y contraseña. Si las credenciales no coinciden, se mostrará un mensaje de error.
+- Una vez autenticado, se debe pasar el parámetro name por la ruta para mostrar un mensaje de bienvenida en el navbar (por ejemplo: "Bienvenido, Pepito").
 - Los usuarios podrán cerrar sesión en cualquier momento.
 - Proteger las rutas de la aplicación para que solo los usuarios autenticados puedan acceder a ellas.
 - **Roles**:
@@ -73,8 +74,21 @@ Los usuarios deberán iniciar sesión utilizando su correo electrónico instituc
 
 ---
 
+Aquí tienes la sección actualizada del algoritmo de procesamiento, incorporando el nuevo detalle sobre la generación del identificador único para cada partida:
+
+---
+
 ### **5. Algoritmo de Procesamiento**
-- Generar un identificador único para cada partida.
+- Generar un identificador único para cada partida:
+  1. Realizar un **GET** al endpoint de puntuaciones (`/scores?playerName={}`).
+  2. Contar la cantidad de partidas jugadas por el usuario (a partir de la respuesta del endpoint).
+  3. Crear un identificador en el formato `P + cantidad de partidas jugadas + iniciales del nombre completo`.
+     - Si el usuario se llama "Lionel Andres Messi", con diez partidas jugadas, el identificador será `P10LAM`.
+     - Si el usuario se llama "Cristiano Ronaldo", con siete partidas jugadas, sería `P7CR`.
+     - Utilizar las iniciales del primer nombre o nombres y el apellido.
+---
+
+Este paso proporciona un método claro para generar un identificador único para cada partida, asegurando que cada jugador tenga un identificador personalizado basado en su historial de juego.
 - Calcular la puntuación basada en la cantidad de intentos restantes:
     - 6 intentos restantes: 100 puntos.
     - 5 intentos restantes: 80 puntos.
