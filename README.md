@@ -1,7 +1,7 @@
-# **Desarrollo del Juego del Ahorcado con Angular**
+# **Desarrollo del Juego de adivinar palabras con Angular**
 
 ## **Objetivo**
-Desarrollar una aplicación web en Angular 18 que implemente el clásico juego del Ahorcado, utilizando formularios reactivos, validaciones, autenticación de usuarios y comunicación con una API REST para gestionar palabras y puntuaciones. La aplicación deberá ser intuitiva, responsive y seguir buenas prácticas de desarrollo.
+Desarrollar una aplicación web en Angular 18 que implemente el juego de adivinar palabras, utilizando formularios reactivos, validaciones, autenticación de usuarios y comunicación con una API REST para gestionar palabras y puntuaciones. La aplicación deberá ser intuitiva, responsive y seguir buenas prácticas de desarrollo.
 
 ---
 
@@ -15,7 +15,7 @@ Desarrollar una aplicación web en Angular 18 que implemente el clásico juego d
 
 ## **Estructura del Proyecto**
 
-### **1. Juego del Ahorcado**
+### **1. Juego de adivinar palabras**
 #### **1.1 Lógica del Juego**
 - El juego seleccionará una palabra aleatoria desde la API REST.
 - El jugador tendrá un máximo de 6 intentos para adivinar la palabra.
@@ -173,7 +173,7 @@ Los usuarios deberán iniciar sesión utilizando su correo electrónico instituc
 ## **Rutas del Proyecto**
 La aplicación tendrá las siguientes rutas:
 1. **/login**: Para que los usuarios puedan iniciar sesión.
-2. **/game**: Pantalla del juego donde los usuarios pueden jugar al Ahorcado.
+2. **/game**: Pantalla del juego donde los usuarios pueden jugar.
 3. **/scores**: Pantalla de puntuaciones.
     - **Para players**: Solo podrán ver sus puntuaciones personales.
     - **Para admins**: Podrán ver todas las puntuaciones de todos los usuarios.
@@ -181,15 +181,9 @@ La aplicación tendrá las siguientes rutas:
 
 ---
 
-## **Diseño Gráfico (SVG del Ahorcado)**
+## **Diseño Gráfico (SVG del Personaje)**
 ```html
 <svg width="200" height="300">
-    <!-- Base y soporte -->
-    <line x1="50" y1="250" x2="150" y2="250" stroke="black" stroke-width="5" /> <!--base-->
-    <line x1="100" y1="250" x2="100" y2="50" stroke="black" stroke-width="5" /> <!--soporte-->
-    <line x1="100" y1="50" x2="150" y2="50" stroke="black" stroke-width="5" /> <!--travesaño-->
-    <line x1="150" y1="50" x2="150" y2="100" stroke="black" stroke-width="5" /> <!--cuerda-->
-
     <!-- Dibujo del personaje -->
     <circle cx="150" cy="120" r="20" fill="black" /> <!--cabeza--->
     <line x1="150" y1="140" x2="150" y2="200" stroke="black" /> <!--cuerpo-->
