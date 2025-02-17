@@ -118,26 +118,38 @@ Los usuarios deberán iniciar sesión utilizando su correo electrónico instituc
 ```json
 [
   {
-    "id": "1",
-    "playerName": "Juan Pérez",
+    "playerName": "Cristiano Ronaldo",
     "word": "angular",
     "attemptsLeft": 4,
     "score": 60,
-    "date": "2024-10-28"
+    "date": "2024-10-28",
+    "idGame": "P1CR",
+    "id": "1"
+  },
+  {
+    "playerName": "Lionel Andres Messi",
+    "word": "angular",
+    "attemptsLeft": 4,
+    "score": 60,
+    "date": "2024-10-28",
+    "idGame": "P1LAM",
+    "id": "2"
   }
 ]
+
 ```
 
 #### Formato de Solicitud (POST):
 ```json
 {
-  "id": "p1JP",
-  "playerName": "Juan Pérez",
-  "word": "angular",
-  "attemptsLeft": 4,
-  "score": 60,
-  "date": "2024-10-28"
-}
+    "playerName": "Cristiano Ronaldo",
+    "word": "angular",
+    "attemptsLeft": 4,
+    "score": 60,
+    "date": "2024-10-28",
+    "idGame": "P1CR",
+    "id": "1"
+  }
 ```
 
 ### **3. Endpoint de Usuarios**
