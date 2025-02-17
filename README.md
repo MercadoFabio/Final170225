@@ -23,7 +23,7 @@ Desarrollar una aplicación web en Angular 18 que implemente el juego de adivina
     - La palabra oculta representada con guiones bajos (`_ _ _ _`).
     - Letras incorrectas ya seleccionadas.
     - Letras correctas ya seleccionadas.
-    - Un dibujo del ahorcado que se completa progresivamente con cada error (ver ejemplo SVG al final).
+    - Un dibujo del personaje que se completa progresivamente con cada error (ver ejemplo SVG al final).
     - Un teclado virtual para seleccionar las letras.
 - Cuando el jugador adivine la palabra, se mostrará un mensaje de victoria y se guardará su puntuación.
 - Si el jugador no adivina la palabra, se mostrará un mensaje de derrota.
