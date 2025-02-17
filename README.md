@@ -54,7 +54,7 @@ Desarrollar una aplicación web en Angular 18 que implemente el clásico juego d
 - Los usuarios podrán cerrar sesión en cualquier momento.
 - Proteger las rutas de la aplicación para que solo los usuarios autenticados puedan acceder a ellas.
 - **Roles**:
-    - **player**: Acceso limitado a las funcionalidades del juego y sus puntuaciones.
+    - **student**: Acceso limitado a las funcionalidades del juego y sus puntuaciones.
     - **admin**: Acceso completo a todas las puntuaciones y gestión de usuarios.
       
 ## **Explicación para el Inicio de Sesión**
