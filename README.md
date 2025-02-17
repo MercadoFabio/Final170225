@@ -82,9 +82,6 @@ Los usuarios deberán iniciar sesión utilizando su correo electrónico instituc
      - Si el usuario se llama "Lionel Andres Messi", con diez partidas jugadas, el identificador será `P10LAM`.
      - Si el usuario se llama "Cristiano Ronaldo", con siete partidas jugadas, sería `P7CR`.
      - Utilizar las iniciales del primer nombre o nombres y el apellido.
----
-
-Este paso proporciona un método claro para generar un identificador único para cada partida, asegurando que cada jugador tenga un identificador personalizado basado en su historial de juego.
 - Calcular la puntuación basada en la cantidad de intentos restantes:
     - 6 intentos restantes: 100 puntos.
     - 5 intentos restantes: 80 puntos.
@@ -169,10 +166,6 @@ La aplicación tendrá las siguientes rutas:
     - **Para players**: Solo podrán ver sus puntuaciones personales.
     - **Para admins**: Podrán ver todas las puntuaciones de todos los usuarios.
 
----
-
-## **Configuración de Mock API**
-El uso de una Mock API te permitirá simular la comunicación con un servidor real durante el desarrollo. Puedes utilizar herramientas como JSON Server o cualquier otra Mock API que prefieras para crear los endpoints definidos anteriormente y tener respuestas simuladas. Asegúrate de que tu aplicación esté correctamente configurada para interactuar con estos endpoints simulados.
 
 ---
 
